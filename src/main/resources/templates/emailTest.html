@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="/js/emailTest.js"></script>
 </head>
 <body>
-    <form method="post" action="/send-mail">
-        <button>전송</button>
-    </form>
+    <div id="mail_input" name="mail_input">
+        <input type="text" name="mail" id="mail" placeholder="이메일 입력">
+        <button type="button" id="sendBtn" name="sendBtn">인증번호</button>
+    </div>
+    <br>
+    <div id="mail_number" name="mail_number" style="display: none">
+        <input type="text" name="number" id="number" placeholder="인증번호 입력">
+        <button type="button" name="confirmBtn" id="confirmBtn" onclick="confirmNumber()">이메일 인증</button>
+    </div>
+    <br>
+    <input type="hidden" id="Confirm" name="Confirm"  value="">
+
 </body>
 </html>
